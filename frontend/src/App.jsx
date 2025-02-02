@@ -7,6 +7,8 @@ import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/AuthContext";
 import AboutUs from "./pages/about/AboutUs";
 import TermsAndConditions from "./pages/terms/TermsAndConditions";
+import CancellationRefund from "./pages/cancellation/CancellationRefund";
+import PrivacyPolicy from "./pages/policy/PrivacyPolicy";
 
 function App() {
   const { authUser } = useAuthContext();
@@ -19,6 +21,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/terms" element={<TermsAndConditions />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/cancellation" element={<CancellationRefund />} />
+            <Route path="/privacy&policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<Navigate to="/" />} />
           </>
         ) : (
